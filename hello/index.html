@@ -2,79 +2,50 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
-		<style type="text/css">
-			*{margin: 0;padding: 0;border: 0;list-style: none;}
-			a{text-decoration: none;font-size: 30px;color: #fff;}
-			div{
-				width: 580px;
+		<title>表单</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			form{
+				width: 300px;
 				height: 200px;
-				margin: 50px auto;
-				position: relative;
-			}
-			a{
-				float: left;
-				width: 25px;
-				height: 90px;
-				line-height: 90px;
-				background: #333;
-				opacity: 0.7;
-				border-radius: 4px;
+				background-color: aqua;
+				position: absolute;
+				margin: auto;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				padding-top: 20px;
 				text-align: center;
-				display: none;
-				cursor: pointer;
 			}
-			.left{
-				position: absolute;
-				left: -12px;
-				top: 60px;
+			form div{
+				margin: 15px 0px;
 			}
-			.right{
-				position: absolute;
-				right: -12px;
-				top: 60px;
-			}
-			div:hover a{
-				display: block;
-			}
-			ul{
-				width: 110px;
+			form input{
+				width: 100px;
 				height: 20px;
-				background: #333;
-				opacity: 0.5;
-				border-radius: 8px;
-				position: absolute;
-				right: 30px;
-				bottom: 20px;
-				text-align: center;
-			}
-			li{
-				width: 5px;
-				height: 5px;
-				background: #ccc;
-				border-radius: 50%;
-				display: inline-block;
-			}
-			.max{
-				width: 12px;
-				background: #03BDE4;
-				border-radius: 6px;
 			}
 		</style>
 	</head>
 	<body>
+		<form action="http://10.100.7.7/server.php" method="post">
 		<div>
-			<img src="img/timg.jpg" width="580" height="250"/>
-			<a href="#" class="left"></a>
-			<a href="#" class="right"></a>
-			<ul>
-				<li class="max"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
+			<label for="username">用户名</label>
+			<input type="text" name="username" id="username" />
 		</div>
+		<div>
+			<label for="psw">密&nbsp;&nbsp;&nbsp;码</label>
+			<input type="text" name="psw" id="psw" />
+		</div>
+		<div>
+			<label for="e_mail">邮&nbsp;&nbsp;&nbsp;箱</label>
+			<input type="email"  name="e_mail" id="email"/>
+		</div>
+		<input type="submit" value="注册" />
+		</form>
 	</body>
 </html>
